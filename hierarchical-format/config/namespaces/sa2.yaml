@@ -1,0 +1,9 @@
+apiVersion: v1
+kind: ServiceAccount
+metadata:
+  name: linkerd-service-mirror-remote-access-default
+  namespace: linkerd-multicluster
+  labels:
+    linkerd.io/extension: multicluster
+  annotations:
+    linkerd.io/created-by: linkerd/cli stable-2.10.2

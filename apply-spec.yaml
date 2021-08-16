@@ -1,0 +1,9 @@
+applySpecVersion: 1
+spec:
+  configSync:
+    enabled: true
+    sourceFormat: unstructured
+    syncRepo: https://github.com/abhianand09/anthos-config-management-samples.git
+    syncBranch: main
+    secretType: token
+    policyDir: helm-component/manifests

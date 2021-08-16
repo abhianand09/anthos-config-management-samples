@@ -1,0 +1,27 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: linkerd-gateway
+  namespace: linkerd-multicluster
+  labels:
+    linkerd.io/extension: multicluster
+  annotations:
+    mirror.linkerd.io/gateway-identity: linkerd-gateway.linkerd-multicluster.serviceaccount.identity.linkerd.cluster.local
+    networking.gke.io/load-balancer-type: "Internal"
+    networking.gke.io/internal-load-balancer-allow-global-access: "true"
+    mirror.linkerd.io/probe-period: "3"
+    mirror.linkerd.io/probe-path: /health
+    mirror.linkerd.io/multicluster-gateway: "true"
+    linkerd.io/control-plane-component: gateway
+    linkerd.io/created-by: linkerd/cli stable-2.10.2
+spec:
+  ports:
+  - name: mc-gateway
+    port: 4143
+    protocol: TCP
+  - name: mc-probe
+    port: 4181
+    protocol: TCP
+  selector:
+    app: linkerd-gateway
+  type: LoadBalancer
