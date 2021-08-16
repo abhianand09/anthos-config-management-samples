@@ -1,0 +1,6 @@
+kind: Namespace
+apiVersion: v1
+metadata:
+  name: linkerd-multicluster
+  labels:
+    linkerd.io/extension: multicluster

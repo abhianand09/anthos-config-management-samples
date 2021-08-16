@@ -1,0 +1,17 @@
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRole
+metadata:
+  name: linkerd-service-mirror-remote-access-default
+  namespace: linkerd-multicluster
+  labels:
+    linkerd.io/extension: multicluster
+  annotations:
+    linkerd.io/created-by: linkerd/cli stable-2.10.2
+rules:
+- apiGroups: [""]
+  resources: ["services"]
+  verbs: ["list", "get", "watch"]
+- apiGroups: [""]
+  resources: ["configmaps"]
+  verbs: ["get"]
+  resourceNames: ["linkerd-config"]
