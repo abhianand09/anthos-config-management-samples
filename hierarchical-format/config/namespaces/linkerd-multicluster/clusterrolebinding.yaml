@@ -13,4 +13,3 @@ roleRef:
 subjects:
 - kind: ServiceAccount
   name: linkerd-service-mirror-remote-access-default
-  namespace: linkerd-multicluster
