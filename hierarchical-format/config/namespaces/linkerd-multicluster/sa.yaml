@@ -2,6 +2,5 @@ kind: ServiceAccount
 apiVersion: v1
 metadata:
   name: linkerd-gateway
-  namespace: linkerd-multicluster
   labels:
     linkerd.io/extension: multicluster

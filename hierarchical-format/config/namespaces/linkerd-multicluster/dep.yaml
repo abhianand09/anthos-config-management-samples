@@ -11,7 +11,6 @@ metadata:
     app: linkerd-gateway
     linkerd.io/extension: multicluster
   name: linkerd-gateway
-  namespace: linkerd-multicluster
 spec:
   replicas: 1
   selector:

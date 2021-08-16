@@ -7,7 +7,6 @@ metadata:
     linkerd.io/extension: multicluster
   annotations:
     linkerd.io/created-by: linkerd/cli stable-2.10.2
-  namespace: linkerd-multicluster
 data:
   nginx.conf: |-
     error_log stderr;
