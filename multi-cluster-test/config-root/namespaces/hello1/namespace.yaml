@@ -1,0 +1,7 @@
+# creates namespace named "hello"
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: hello1
+  annotations:
+    configsync.gke.io/cluster-name-selector: select-location-taiwan
