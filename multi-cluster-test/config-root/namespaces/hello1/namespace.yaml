@@ -4,4 +4,4 @@ kind: Namespace
 metadata:
   name: hello1
   annotations:
-    configsync.gke.io/cluster-name-selector: select-location-taiwan
+    configsync.gke.io/cluster-name-selector: select-location-belgium
