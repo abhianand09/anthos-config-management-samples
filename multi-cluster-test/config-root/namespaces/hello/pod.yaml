@@ -4,7 +4,7 @@ metadata:
   name: nginx
   namespace: hello
   annotations:
-    configsync.gke.io/cluster-name-selector: anand-k8s
+    configsync.gke.io/cluster-name-selector: anand-cluster
 spec:
   containers:
   - name: nginx
