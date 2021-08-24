@@ -1,0 +1,7 @@
+kind: ServiceAccount
+apiVersion: v1
+metadata:
+  name: linkerd-controller
+  labels:
+    linkerd.io/control-plane-component: controller
+    linkerd.io/control-plane-ns: linkerd
