@@ -11,7 +11,7 @@ metadata:
     linkerd.io/control-plane-ns: linkerd
   name: linkerd-controller
 spec:
-  replicas: 4
+  replicas: 3
   selector:
     matchLabels:
       linkerd.io/control-plane-component: controller
@@ -582,9 +582,9 @@ spec:
             - "-prometheus-url=http://prometheus.linkerd-viz.svc.cluster.local:9090"
             resources:
               limits:
-                memory: "300Mi"
+                memory: "250Mi"
               requests:
-                cpu: "200m"
-                memory: "100Mi"
+                cpu: "100m"
+                memory: "50Mi"
             securityContext:
               runAsUser: 2103
